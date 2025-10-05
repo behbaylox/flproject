@@ -1,0 +1,37 @@
+background-color: #f0f0f0;
+  font-famiy: Arial, sans-serif;
+  margin:  20px;
+
+
+
+
+
+
+.link-with-icon {
+  position: relative;
+  padding-left: 24px;
+
+  &::before 
+  
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-image: url("картинки тут епта/9.png");
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@font-face {
+  font-family: 'BioRhymeExpanded-Regular.ttf';
+      src: url("loool/Alkia.ttf") format('truetype');
+}
+
+.text {
+  font-family: 'кастомшрифтный ', "loool/Alkia.ttf";
+}
