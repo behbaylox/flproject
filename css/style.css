@@ -9,7 +9,7 @@
         body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#f7f8f9;color:var(--text)}
 
 
-        
+
         .site-header{
             background: linear-gradient(180deg, var(--gray-pastel), var(--gray-accent));
             border-bottom: 1px solid rgba(47,52,56,0.08);
@@ -46,3 +46,190 @@
             .container{padding:10px}
             nav ul{gap:8px}
         }
+
+        /* Team section styles */
+.team {
+    padding: 3rem 1rem;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    color: #111827;
+}
+
+/* Title */
+.team-title {
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 0 0 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+/* Grid of developer cards */
+.team-list {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Card */
+.developer {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform .22s ease, box-shadow .22s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image */
+.developer img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Caption/content */
+.developer figcaption {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.dev-name {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.dev-desc {
+    margin: 0;
+    font-size: .95rem;
+    line-height: 1.4;
+    color: #4b5563;
+}
+
+/* Hover / focus effects */
+.developer:hover,
+.developer:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+    outline: none;
+}
+
+/* Accessible focus for links inside cards */
+.developer a { color: inherit; text-decoration: none; }
+.developer a:focus { outline: 3px solid rgba(59,130,246,0.35); outline-offset: 3px; }
+
+/* Responsive adjustments */
+@media (max-width: 420px) {
+    .developer img { height: 180px; }
+    .team { padding: 2rem .75rem; }
+    .team-title { font-size: 1.4rem; }
+}
+
+        /* Footer styles */
+        .site-footer{
+            background: linear-gradient(180deg, var(--gray-pastel), var(--gray-accent));
+            border-top: 1px solid rgba(47,52,56,0.08);
+            margin-top:40px;
+        }
+        .site-footer .container{
+            padding:12px 20px;
+            justify-content:center;
+        }
+        .site-footer p{margin:0;font-size:.875rem;color:var(--text)}
+
+
+
+
+
+        /* Секция соцсетей */
+.social{
+
+    padding: 36px 0;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    flex-direction: column;
+}
+
+.social-title{
+    margin: 0 0 8px;
+    font-size: 1.9rem;
+}
+.social-desc{
+    margin: 0;
+    color: #555;
+}
+
+.social-list{
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.social-list li{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #fff;
+    padding: 8px 12px;
+}
+
+.social-list a{
+    color: var(--text);
+    text-decoration: none;
+    transition: .15s;
+}
+
+
+.gallery{
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+
+
+
+.gallery-title{
+    margin: 0 0 8px;
+    font-size: 1.9rem;
+}
+
+
+
+gallery-list{
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+
+.gallery-item img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    transition: transform .22s ease, box-shadow .22s ease;
+}
