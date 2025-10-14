@@ -15,7 +15,7 @@ body {
   background-color: #f2f4f7;
 }
 
-/* --- Шапка сайта --- */
+
 .site-header {
   position: fixed;
   top: 0;
@@ -28,13 +28,13 @@ body {
 
 .site-header .container {
   display: flex;
-  justify-content: center; /* центрируем содержимое */
+  justify-content: center; 
   align-items: center;
   padding: 1rem 2rem;
   position: relative;
 }
 
-/* Название сайта (плашка слева) */
+
 .site-title {
   position: absolute;
   left: 2rem;
@@ -43,7 +43,7 @@ body {
   color: var(--text);
 }
 
-/* --- Навигация --- */
+
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -66,9 +66,9 @@ body {
   color: #0078ff;
 }
 
-/* --- Основные секции --- */
+
 section {
-  padding: 140px 20px 80px; /* добавил больше сверху, чтобы не перекрывало меню */
+  padding: 140px 20px 80px;
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
@@ -84,3 +84,88 @@ section p {
   line-height: 1.6;
   max-width: 700px; 
 }
+
+#projects {
+    padding: 100px 0;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0078ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005fcc;
+}
+
+.project-card img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 120px;        /* уменьшили */
+  max-height: 100px;       /* ограничили по высоте */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;            /* фиксированный, аккуратный размер */
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
