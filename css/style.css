@@ -1,48 +1,86 @@
-:root{
-            --gray-pastel: #e9ecef;
-            --gray-accent: #d6d9dd;
-            --text: #2f3438;
-        }
-        *{box-sizing:border-box}
+:root {
+  --gray-pastel: #e9ecef;
+  --gray-accent: #d6d9dd;
+  --text: #2f3438;
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
-        body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#f7f8f9;color:var(--text)}
+body {
+  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f4f7;
+}
 
+/* --- Шапка сайта --- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
 
-        
-        .site-header{
-            background: linear-gradient(180deg, var(--gray-pastel), var(--gray-accent));
-            border-bottom: 1px solid rgba(47,52,56,0.08);
-        }
-        .container{
-            max-width:1100px;
-            margin:0 auto;
-            padding:12px 20px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            gap:16px;
-        }
-        .logo{margin:0;font-size:1.125rem;font-weight:600;color:var(--text)}
-        nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px;align-items:center}
-        nav a{
-            color:var(--text);
-            text-decoration:none;
-            padding:8px 10px;
-            border-radius:6px;
-            transition: .15s;
-        }
-        nav a:hover{background:rgba(47,52,56,0.06)}
-        .hero{
-            padding:36px 0;
-            max-width:1100px;
-            margin:0 auto;
-            padding-left:20px;
-            padding-right:20px;
-        }
-        .hero h2{margin:0 0 8px;font-size:1.5rem}
-        .hero p{margin:0;color:#555}
-        @media (max-width:600px){
-            .container{padding:10px}
-            nav ul{gap:8px}
-        }
+.site-header .container {
+  display: flex;
+  justify-content: center; /* центрируем содержимое */
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+/* Название сайта (плашка слева) */
+.site-title {
+  position: absolute;
+  left: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+/* --- Навигация --- */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #0078ff;
+}
+
+/* --- Основные секции --- */
+section {
+  padding: 140px 20px 80px; /* добавил больше сверху, чтобы не перекрывало меню */
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+section h1, section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px; 
+}
